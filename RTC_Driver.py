@@ -11,9 +11,7 @@ RTC_Address = 0x32
 rtc_bus = RTClib.create_RTC(i2c_ch)
 
 while True:
-    print('Date is ', end="", flush=True)
     RTClib.print_date(rtc_bus,RTC_Address) 
-    print(', Time is ', end="", flush=True)
     RTClib.print_time(rtc_bus,RTC_Address)
     time.sleep(1)
 
